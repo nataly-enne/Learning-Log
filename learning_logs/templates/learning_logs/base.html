@@ -1,0 +1,16 @@
+{% load static %}
+
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'learning_logs/style.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<div class="topnav">
+    <a href="{% url 'learning_logs:index' %}">Learning Log</a>
+    <a href="{% url 'learning_logs:topics' %}">Tópicos</a>
+</div>
+
+
+{% block content %}
+{% endblock content %}
