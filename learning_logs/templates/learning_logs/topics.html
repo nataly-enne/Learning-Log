@@ -1,10 +1,16 @@
 {% extends "learning_logs/base.html" %}
     {% block content %}
-    <div class='topiclist'>
+    <div class="topiclist">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'learning_logs:index' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Topics</li>
+            </ol>
+          </nav>
         <h1>
         Tópicos:
-        </h2>
-        <ul>
+        </h1>
+        <ul class="ul-circle">
             {% for topic in topics %}
         <li>
             <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
